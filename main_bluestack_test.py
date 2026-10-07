@@ -17,22 +17,23 @@ options.set_capability("noReset", True)
 options.set_capability("enforceAppInstall", False)
 
 driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
-print("")
+print("🚀 Successfully connected to the Contact Manager app!")
 
 try:
     wait = WebDriverWait(driver, 20)
     
-    # ചിത്രത്തിൽ കാണുന്ന Add Contact ബട്ടൺ കണ്ടെത്തുന്നു
+    # 1. 'Add Contact' button clicked
+    print("✅ Clicked Add Contact ")
     add_button = wait.until(
         EC.presence_of_element_located((AppiumBy.XPATH, "//*[@text='Add Contact']"))
     )
     add_button.click()
-    print("Clicked Add Contact ")
+    print("✅ Clicked Add Contact ")
 
     time.sleep(3)
 
 except Exception as e:
-    print("Error occurred:", e)
+    print("❌ An error occurred:", e)
 
 driver.quit()
 print("Test completed successfully!")
