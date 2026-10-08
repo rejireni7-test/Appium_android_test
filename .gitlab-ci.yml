@@ -6,7 +6,7 @@ stages:
 run_appium_tests:
   stage: test
   # പൈത്തണും ആവശ്യമായ ടൂളുകളും ഉള്ള ഇമേജ്
-  image: python:3.10
+  image: python:3.11
 
   script:
     - echo "Appium Automation Test Pipeline Starting..."
