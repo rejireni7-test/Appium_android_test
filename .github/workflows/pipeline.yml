@@ -26,8 +26,8 @@ jobs:
           
       - name: Start Appium Server
         run: |
-          appium --address 127.0.0.1 --port 4723 &
-          sleep 3
+          npx appium --address 127.0.0.1 --port 4723 &
+          npx wait-on http://127.0.0.1:4723/status
           
       - name: Install Python Dependencies
         run: |
