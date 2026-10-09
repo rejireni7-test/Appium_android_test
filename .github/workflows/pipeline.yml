@@ -21,8 +21,8 @@ jobs:
 
       - name: Install Appium and Driver
         run: |
-          npm install -g appium@next
-          appium driver install uiautomator2
+          npm install -g appium@beta
+          npx appium driver install uiautomator2
           
       - name: Start Appium Server
         run: |
